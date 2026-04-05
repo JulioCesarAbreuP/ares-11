@@ -61,6 +61,17 @@ ARES‑11 prioriza la trazabilidad, la defensa en profundidad y la gobernanza so
 
 ---
 
+
+## Manuales Operativos y AI Assistant
+Accede a la colección completa de manuales operativos, flujos doctrinales y la integración del AI Assistant:
+- [Índice Maestro de Manuales Operativos](docs/manuales-operativos/index.md)
+- [Manual AI Assistant (IA Local/Online)](docs/manuales-operativos/ai-assistant.md)
+- [Integración doctrinal del AI Assistant](docs/manuales-operativos/integracion-ai-assistant.md)
+
+Los manuales cubren cada módulo, flujo y panel de ARES‑11, con ejemplos, diagramas y requisitos. El AI Assistant está documentado y enlazado para consulta rápida.
+
+---
+
 ## Interfaz Empresarial (UI)
 Accede a la interfaz visual y navega todas las herramientas desde:
 - [Interfaz Empresarial de ARES‑11 (UI)](docs/API/UI/index.md)
