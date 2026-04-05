@@ -18,17 +18,6 @@ ARES‑11 se compone de siete módulos:
 
 
 # ARES-11
-
-![Estado](https://img.shields.io/badge/status-active-brightgreen)
-![Versión](https://img.shields.io/badge/version-1.0.0-blue)
-![Licencia](https://img.shields.io/badge/license-MIT-green)
-![Build](https://img.shields.io/badge/build-passing-lightgrey)
-
-Plataforma modular, extensible y certificable para auditoría, análisis y orquestación de flujos de ciberseguridad.
-
----
-
-## Propósito del proyecto
 ARES-11 permite a equipos de seguridad automatizar auditorías, integrar inteligencia, correlacionar amenazas y generar evidencia técnica verificable, alineada con estándares internacionales (CIS, MITRE ATT&CK, NIST CSF).
 
 ## Arquitectura general
@@ -39,7 +28,6 @@ Orchestrator central endurecido, pipeline configurable y validable, módulos cor
 ```
 [Entrada] → [Orchestrator] → [Pipeline]
 	├─► [CIS Auditor]
-	├─► [Fingerprint]
 	├─► [KEV]
 	├─► [Remediation]
 	├─► [Risk Engine]
@@ -63,6 +51,14 @@ npm start
 
 ## Casos de uso
 - Auditoría automatizada de controles CIS
+### Documentación Doctrinal (API)
+
+La documentación doctrinal de ARES‑11 describe en detalle cada módulo, herramienta y componente del motor de razonamiento de seguridad, alineando la operación con estándares internacionales y mejores prácticas empresariales.
+
+- [Acceso al índice doctrinal de la API](docs/API/index.md)
+- [Paneles UI avanzados](docs/API/ui-panels.md)
+
+Esta sección permite navegar la arquitectura, los módulos y la interfaz empresarial de ARES‑11, facilitando la auditoría basada en evidencia y la toma de decisiones táctica.
 - Correlación de amenazas con MITRE ATT&CK
 - Generación de planes NIST CSF y evidencia técnica
 - Integración de inteligencia vía TAXII/STIX
