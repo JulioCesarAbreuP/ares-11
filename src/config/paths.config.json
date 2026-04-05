@@ -1,0 +1,5 @@
+{
+  "fingerprintOutput": "fingerprint.json",
+  "dashboardMitre": "dashboard-mitre.json",
+  "dashboardNist": "dashboard-nist.json"
+}

@@ -1,0 +1,12 @@
+{
+  "endpoints": [
+    {
+      "name": "MITRE",
+      "url": "https://cti-taxii.mitre.org/taxii/"
+    },
+    {
+      "name": "CISA KEV",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ]
+}

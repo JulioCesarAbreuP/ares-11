@@ -1,0 +1,25 @@
+{
+  "name": "ares-11",
+  "version": "0.1.0",
+  "description": "Plataforma modular para auditoría de seguridad y correlación de amenazas.",
+  "main": "src/ui/dashboard/index.js",
+  "scripts": {
+    "dev": "sh ./scripts/dev.sh",
+    "build": "sh ./scripts/build.sh",
+    "test": "sh ./scripts/test.sh",
+    "pipeline": "sh ./scripts/pipeline.sh",
+    "clean": "sh ./scripts/clean.sh",
+    "validate": "node src/utils/validateProject.js",
+    "validate:extended": "node src/utils/validateProjectExtended.js",
+    "validate:pro": "node src/utils/validateProjectPRO.js",
+    "validate:ultra": "node src/utils/validateProjectULTRA.js",
+    "irp02": "node irp02.js",
+    "irp03": "node src/utils/validateProjectPRO.js",
+    "health": "node healthCheck.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "external_id": "T1003",
+    "name": "Credential Dumping",
+    "kill_chain": "Credential Access",
+    "status": "CRITICAL"
+  },
+  {
+    "external_id": "T1059",
+    "name": "Command and Scripting Interpreter",
+    "kill_chain": "Execution",
+    "status": "STABLE"
+  },
+  {
+    "external_id": "T1078",
+    "name": "Valid Accounts",
+    "kill_chain": "Persistence",
+    "status": "CRITICAL"
+  }
+]

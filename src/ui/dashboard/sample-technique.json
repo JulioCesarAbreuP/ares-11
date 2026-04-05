@@ -1,0 +1,6 @@
+{
+  "external_id": "T1133",
+  "name": "External Remote Services",
+  "status": "CRITICAL",
+  "kill_chain": "initial-access"
+}

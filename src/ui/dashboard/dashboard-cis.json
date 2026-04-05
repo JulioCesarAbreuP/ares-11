@@ -1,0 +1,15 @@
+[
+    {
+      "control": "CIS 1.1 - Inventory of Authorized and Unauthorized Devices",
+      "IG1": "Mantener inventario básico de dispositivos",
+      "IG2": "Correlacionar inventario con vulnerabilidades",
+      "IG3": "Automatizar descubrimiento y reconciliación"
+    },
+    {
+      "control": "CIS 4.1 - Establish and Maintain a Secure Configuration Process",
+      "IG1": "Definir configuraciones seguras base",
+      "IG2": "Aplicar configuraciones mediante herramientas centralizadas",
+      "IG3": "Monitorizar desviaciones en tiempo casi real"
+    }
+  ]
+  

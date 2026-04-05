@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<title>ARES‑11 — IRP‑02 Integration Report</title>
+<style>
+body { background:#111; color:#ddd; font-family:Arial; padding:20px; }
+h1,h2 { color:white; }
+p { margin:4px 0; }
+</style>
+</head>
+<body>
+<h1>ARES‑11 — IRP‑02 Integration Report</h1>
+<div style="background:#2ecc71;color:white;padding:10px;border-radius:6px;width:150px;text-align:center">INTEGRATION: PERFECT</div>
+<h2>Score final: 40/40</h2>
+<p><h2>A) Panel NIST CSF</h2></p>
+<p style="color:#2ecc71">✔️ 1. renderNistPanel.js existe</p>
+<p style="color:#2ecc71">✔️ 2. index.html contiene #nist-panel</p>
+<p style="color:#2ecc71">✔️ 3. nist-panel.css existe</p>
+<p style="color:#2ecc71">✔️ 4. dashboard-nist.json existe</p>
+<p style="color:#2ecc71">✔️ 5. loadDashboardData.js importa renderNistPanel</p>
+<p><h2>B) Motor de correlación</h2></p>
+<p style="color:#2ecc71">✔️ 6. threat-mapper.js existe</p>
+<p style="color:#2ecc71">✔️ 7. threat-mapper exporta buildMitreHeatmap</p>
+<p style="color:#2ecc71">✔️ 8. threat-mapper exporta buildNistPlan</p>
+<p style="color:#2ecc71">✔️ 9. pipeline importa threat-mapper</p>
+<p style="color:#2ecc71">✔️ 10. correlación genera JSON</p>
+<p><h2>C) Pipeline completo</h2></p>
+<p style="color:#2ecc71">✔️ 11. fingerprint.go existe</p>
+<p style="color:#2ecc71">✔️ 12. taxiiClient.js existe</p>
+<p style="color:#2ecc71">✔️ 13. pipeline genera dashboard-mitre.json</p>
+<p style="color:#2ecc71">✔️ 14. pipeline genera dashboard-nist.json</p>
+<p style="color:#2ecc71">✔️ 15. index.html carga loadDashboardData.js</p>
+<p><h2>ADR‑004 — Risk Engine</h2></p>
+<p style="color:#2ecc71">✔️ 16. riskEngine.js existe</p>
+<p style="color:#2ecc71">✔️ 17. Risk Engine recibe datos del Threat Mapper</p>
+<p style="color:#2ecc71">✔️ 18. Risk Engine produce score</p>
+<p style="color:#2ecc71">✔️ 19. dashboard tiene panel de riesgo</p>
+<p style="color:#2ecc71">✔️ 20. Risk Engine no depende de datos inexistentes</p>
+<p><h2>ADR‑005 — Remediation Engine</h2></p>
+<p style="color:#2ecc71">✔️ 21. remediationEngine.js existe</p>
+<p style="color:#2ecc71">✔️ 22. Mapea MITRE → CIS → IG1/IG2/IG3</p>
+<p style="color:#2ecc71">✔️ 23. Produce recomendaciones</p>
+<p style="color:#2ecc71">✔️ 24. dashboard tiene panel de remediación</p>
+<p style="color:#2ecc71">✔️ 25. Motor funciona con pocos datos</p>
+<p><h2>Integración CISA KEV</h2></p>
+<p style="color:#2ecc71">✔️ 26. kevClient.js existe</p>
+<p style="color:#2ecc71">✔️ 27. KEV se carga o descarga</p>
+<p style="color:#2ecc71">✔️ 28. Threat Mapper cruza KEV</p>
+<p style="color:#2ecc71">✔️ 29. dashboard muestra KEV</p>
+<p style="color:#2ecc71">✔️ 30. Pipeline no falla si KEV está vacío</p>
+<p><h2>Panel CIS Controls v8</h2></p>
+<p style="color:#2ecc71">✔️ 31. cisPanel.js existe</p>
+<p style="color:#2ecc71">✔️ 32. correlación genera controles CIS</p>
+<p style="color:#2ecc71">✔️ 33. panel CIS se renderiza</p>
+<p style="color:#2ecc71">✔️ 34. CSS CIS existe</p>
+<p style="color:#2ecc71">✔️ 35. pipeline exporta datos CIS</p>
+<p><h2>Tactical Terminal</h2></p>
+<p style="color:#2ecc71">✔️ 36. tacticalTerminal.js existe</p>
+<p style="color:#2ecc71">✔️ 37. Recibe eventos del pipeline</p>
+<p style="color:#2ecc71">✔️ 38. Renderiza logs</p>
+<p style="color:#2ecc71">✔️ 39. No bloquea el dashboard</p>
+<p style="color:#2ecc71">✔️ 40. Funciona sin eventos</p>
+</body>
+</html>

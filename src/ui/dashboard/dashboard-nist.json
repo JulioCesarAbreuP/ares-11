@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ID",
+    "name": "Identify",
+    "priority": "HIGH",
+    "controls": [
+      "ID.AM-1: Inventory of authorized devices",
+      "ID.RA-1: Risk assessment for exposed services"
+    ]
+  },
+  {
+    "id": "PR",
+    "name": "Protect",
+    "priority": "HIGH",
+    "controls": [
+      "PR.AC-3: Remote access control (RDP/SSH/MFA)",
+      "PR.IP-1: Harden baseline configurations"
+    ]
+  },
+  {
+    "id": "DE",
+    "name": "Detect",
+    "priority": "MEDIUM",
+    "controls": [
+      "DE.CM-7: Monitoring for anomalous network activity"
+    ]
+  }
+]

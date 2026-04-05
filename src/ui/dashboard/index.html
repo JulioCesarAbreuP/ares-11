@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>ARES‑11 Tactical Command Dashboard</title>
+  <link rel="stylesheet" href="../styles/dashboard-theme.css" />
+  <link rel="stylesheet" href="../styles/nist-panel.css" />
+</head>
+<body>
+  <div class="scc-container">
+    <header class="scc-header">
+      <h1>ARES‑11: TACTICAL SECURITY PROBE</h1>
+      <div class="status-bar">
+        <span>NETWORK: IG1–IG3 OBSERVED</span>
+        <span id="taxii-status" class="pulse">INTEL: SYNCED WITH MITRE TAXII</span>
+      </div>
+    </header>
+
+    <div class="dashboard-grid" style="
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    ">
+      <!-- MITRE Heatmap -->
+      <section class="panel mitre-matrix">
+        <h3>MITRE ATT&CK® Real-Time Vulnerability Map</h3>
+        <div id="mitre-heatmap"></div>
+      </section>
+
+      <!-- NIST CSF Action Plan -->
+      <section class="panel nist-recommendations">
+        <h3>NIST CSF Action Plan</h3>
+        <div id="nist-panel"></div>
+      </section>
+
+      <!-- Risk Engine Panel -->
+      <section class="panel">
+        <h3>Risk Engine</h3>
+        <div id="risk-panel"></div>
+      </section>
+
+      <!-- Remediation Engine Panel -->
+      <section class="panel">
+        <h3>Remediation Engine</h3>
+        <div id="remediation-panel"></div>
+      </section>
+
+      <!-- KEV Panel -->
+      <section class="panel">
+        <h3>CISA KEV</h3>
+        <div id="kev-panel"></div>
+      </section>
+
+      <!-- CIS Panel -->
+      <section class="panel">
+        <h3>CIS Controls</h3>
+        <div id="cis-panel"></div>
+      </section>
+
+      <!-- Performance Panel -->
+      <section class="panel" style="grid-column: 1 / span 2;">
+        <h3>Pipeline Performance</h3>
+        <div id="performance-panel"></div>
+      </section>
+
+      <!-- Tactical Terminal -->
+      <section class="panel" style="grid-column: 1 / span 2;">
+        <h3>ARES‑11 Tactical Terminal</h3>
+        <div id="tactical-terminal"></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="./loadDashboardData.js"></script>
+  <script type="module" src="./loadCisPanel.js"></script>
+  <script type="module" src="./loadTacticalTerminal.js"></script>
+  <script type="module" src="./loadAdvancedPanels.js"></script>
+  <script type="module" src="./loadPerformancePanel.js"></script>
+  <script type="module">
+    import { startTerminalStream } from "./loadTacticalTerminal.js";
+    startTerminalStream();
+  </script>
+</body>
+</html>

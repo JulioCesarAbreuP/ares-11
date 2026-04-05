@@ -1,0 +1,113 @@
+/* Remediation Panel */
+.rem-item {
+  margin-bottom: 14px;
+  padding: 10px;
+  border-left: 3px solid #2ea043;
+  background: #10151b;
+  border-radius: 3px;
+}
+
+.rem-recommendation {
+  display: block;
+  margin-top: 6px;
+  padding: 7px 10px;
+  background: #1a232e;
+  border-left: 4px solid #ffb300;
+  color: #ffd700;
+  font-size: 0.97em;
+  font-family: "Segoe UI", "Fira Sans", Arial, sans-serif;
+  border-radius: 2px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px 0 #0004;
+}
+/* ─────────────────────────────────────────────
+   ARES‑11 — Tactical Dashboard Theme
+   Estética tipo SOC / Cyber Defense Terminal
+   ───────────────────────────────────────────── */
+
+:root {
+  --bg-dark: #020202;
+  --panel-bg: #0a0c10;
+  --text-light: #c9d1d9;
+  --border-gray: #30363d;
+  --mitre-red: #ff3e3e;
+  --mitre-green: #2ea043;
+}
+
+/* Layout general */
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Consolas", "Fira Code", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.scc-container {
+  padding: 20px;
+}
+
+.scc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-gray);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.status-bar span {
+  margin-left: 15px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+  color: var(--mitre-green);
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Paneles */
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-gray);
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* MITRE Heatmap */
+.technique-cell {
+  border: 1px solid var(--border-gray);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  background: #0a0c10;
+  color: var(--text-light);
+}
+
+.technique-cell.CRITICAL {
+  background: rgba(255, 62, 62, 0.15);
+  border-color: var(--mitre-red);
+  color: var(--mitre-red);
+  box-shadow: inset 0 0 10px rgba(255, 62, 62, 0.25);
+  animation: alert-pulse 1.8s infinite;
+}
+
+@keyframes alert-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.technique-cell.STABLE {
+  background: rgba(46, 160, 67, 0.1);
+  border-color: var(--mitre-green);
+  color: var(--mitre-green);
+}
