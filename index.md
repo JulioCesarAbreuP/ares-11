@@ -1,73 +1,119 @@
-# ARES‑11
-
-“No es un escáner. Es un motor de razonamiento de seguridad.”
+# ARES‑11: Motor de Razonamiento de Seguridad
 
 ---
-layout: default
+
+## 🛰️ Propósito
+ARES‑11 es un motor de auditoría táctica diseñado para transformar cualquier red en un mapa de riesgo basado en evidencia.
+
+> “No es un escáner. Es un motor de razonamiento de seguridad.”
+
 ---
-<head>
-	<link rel="icon" href="/assets/favicon.png" type="image/png" />
-</head>
 
-# ARES‑11
+## 🧩 Arquitectura (SABSA‑aligned)
+ARES‑11 se compone de módulos empresariales y tácticos:
 
-“No es un escáner. Es un motor de razonamiento de seguridad.”
+1. **Fingerprinting Engine** — Descubrimiento determinista
+2. **CIS Auditor** — Validación IG1/IG2/IG3
+3. **TAXII Client** — Inteligencia viva
+4. **Threat Mapper** — Correlación MITRE ↔ CIS ↔ NIST
+5. **Risk Engine** — Cálculo de riesgo real
+6. **Remediation Engine** — Sugerencias técnicas
+7. **Tactical Dashboard** — Visualización D3.js
+8. **Quick Triage** — Priorización táctica
+9. **Exporter** — Exportación de hallazgos
+10. **Notifier** — Notificaciones críticas
+11. **Live Monitor** — Monitoreo en tiempo real
+12. **Remediation Script Generator** — Scripts personalizados
+13. **Whitelist** — Gestión de dispositivos confiables
+14. **Shodan Check** — Verificación de exposición pública
+15. **Forensics Packager** — Preservación de evidencia
 
-## Propósito
+---
 
-ARES‑11 es un motor táctico para auditoría, análisis y orquestación de riesgo, alineado con SABSA y orientado a la generación de evidencia técnica y gestión dinámica del riesgo.
+## Filosofía y Mensaje Doctrinal
+ARES‑11 prioriza la trazabilidad, la defensa en profundidad y la gobernanza sobre cada función del motor. Está alineado con SABSA, CIS Controls, NIST 800‑53 y MITRE ATT&CK (defensivo).
 
-## Arquitectura general
+> “No es un escáner. Es un motor de razonamiento de seguridad.”
 
-- Arquitectura SABSA: Contextual, Conceptual, Lógica, Física
-- Motor de razonamiento central
-- Pipeline modular y desacoplado
-- Telemetría avanzada y trazabilidad
-- Integración con CIS, MITRE ATT&CK, NIST CSF
+---
 
-## Módulos principales
+## Menú Empresarial (Hamburguesa)
 
-- Fingerprinting Engine
-- CIS Auditor
-- TAXII Client
-- Threat Mapper
-- Risk Engine
-- Remediation Engine
-- Tactical Dashboard
+- **Inicio**
+- **Arquitectura**
+- **Módulos**
+- **Dashboard táctico**
+- **Documentación doctrinal**
+- **Interfaz (UI)**
+	- CIS Auditor
+	- TAXII Client
+	- Risk Engine
+	- Remediation Engine
+	- Tactical Dashboard
+	- Quick Triage
+	- Exporter
+	- Notifier
+	- Live Monitor
+	- Remediation Script Generator
+	- Whitelist
+	- Shodan Check
+	- Forensics Packager
 
-## Principio rector SABSA
+---
 
-“El tenant gobierna; la identidad porta; la política evalúa.”
+## Interfaz Empresarial (UI)
+Accede a la interfaz visual y navega todas las herramientas desde:
+- [Interfaz Empresarial de ARES‑11 (UI)](docs/API/UI/index.md)
 
-<head>
-	<link rel="icon" href="/assets/favicon.png" type="image/png" />
-</head>
+La UI permite visualizar, gestionar y navegar todos los módulos, paneles y componentes alineados a la doctrina y arquitectura táctica de la plataforma.
 
-# ARES‑11
-Motor de auditoría táctica y razonamiento de riesgo.
+---
 
-## Propósito
-ARES‑11 transforma cualquier red en un mapa táctico de riesgo basado en evidencia.  
-No es un escáner. Es un motor de razonamiento de seguridad.
+## Documentación Doctrinal (API)
+Accede a la documentación doctrinal y técnica de todos los módulos, herramientas y paneles de ARES‑11:
+- [Índice doctrinal de la API](docs/API/index.md)
 
-## Arquitectura general
-Descripción de las capas SABSA y del flujo táctico.
+La documentación proporciona transparencia, trazabilidad y gobernanza sobre cada función del motor, permitiendo comprender el ciclo completo de auditoría basada en evidencia.
 
-## Módulos principales
-- [Fingerprinting Engine](docs/fingerprinting.md)
-- [CIS Auditor](docs/cis-auditor.md)
-- [TAXII Client](docs/taxii-client.md)
-- [Threat Mapper](docs/threat-mapper.md)
-- [Risk Engine](docs/risk-engine.md)
-- [Remediation Engine](docs/remediation-engine.md)
-- [Tactical Dashboard](docs/tactical-dashboard.md)
+---
 
-## Principio rector
-“El tenant gobierna; la identidad porta; la política evalúa.”
+## Instalación y Uso
 
-## Navegación
-- [Arquitectura](docs/arquitectura.md)
-- [Módulos](docs/modulos.md)
-- [Dashboard táctico](docs/tactical-dashboard.md)
-- [Filosofía](docs/filosofia.md)
-- [Roadmap](docs/roadmap.md)
+Requisitos: Node.js >= 18, npm >= 9
+
+```bash
+git clone https://github.com/JulioCesarAbreuP/ares-11.git
+cd ares-11
+npm install
+npm start
+```
+
+---
+
+## Casos de Uso
+- Auditoría automatizada de controles CIS
+- Correlación de amenazas con MITRE ATT&CK
+- Generación de planes NIST CSF y evidencia técnica
+- Integración de inteligencia vía TAXII/STIX
+- Visualización de riesgos y remediación
+
+---
+
+## Buenas Prácticas
+- Modularizar nuevas funcionalidades y documentar cada módulo
+- Usar logs estructurados, métricas y eventos normalizados
+- Versionar configuraciones, reglas y esquemas
+- Revisar y actualizar dashboards y documentación periódicamente
+- Validar la cobertura y calidad mediante pruebas, auditoría y telemetría avanzada
+
+---
+
+## Advertencias Técnicas
+- Respetar interfaces, contratos y modularidad estricta
+- Validar entradas, salidas y evidencia técnica
+- No acoplar lógica de negocio al orchestrator
+- Mantener trazabilidad, telemetría y observabilidad avanzada de extremo a extremo
+
+---
+
+> “No es un escáner. Es un motor de razonamiento de seguridad.”
