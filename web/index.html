@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-900 text-white p-8">
+    <h1 class="text-3xl font-bold border-b border-red-500 pb-2">ARES-11: Tactical Dashboard</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+            <h2 class="text-xl mb-4 text-red-400 font-mono">MITRE ATT&CK Status</h2>
+            <canvas id="riskChart"></canvas>
+        </div>
+
+        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+            <h2 class="text-xl mb-4 text-green-400 font-mono">Acciones de Defensa (CIS/SC-300)</h2>
+            <div id="recommendations" class="space-y-4">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulación de carga de datos desde el motor de correlación
+        const report = [
+            {"control": "SC-300", "issue": "RDP Expuesto", "fix": "Aplicar Conditional Access"}
+        ];
+
+        const list = document.getElementById('recommendations');
+        report.forEach(item => {
+            list.innerHTML += `
+                <div class="p-3 bg-slate-700 rounded border-l-4 border-red-500">
+                    <p class="font-bold">${item.control}: ${item.issue}</p>
+                    <p class="text-sm text-slate-300">${item.fix}</p>
+                </div>`;
+        });
+    </script>
+</body>
+</html>
