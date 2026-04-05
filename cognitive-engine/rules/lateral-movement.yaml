@@ -1,0 +1,15 @@
+rule:
+  name: "Detect Lateral Movement via RRSS & AI"
+  signals:
+    - type: "anomaly"
+    - type: "rrss"
+  condition: >
+    (signal.type == "anomaly" and signal.source == "AI") or
+    (signal.type == "rrss" and signal.payload.threat_trend == true)
+  severity: "high"
+  recommendation: "Aislar host, activar remediación, notificar SOC"
+  integration:
+    - module: "cognitive-engine"
+    - module: "remediation"
+    - module: "dashboard"
+    - module: "api"

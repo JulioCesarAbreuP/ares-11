@@ -1,0 +1,14 @@
+# config.yaml
+# Configuración global de ARES-11
+core:
+  log_level: INFO
+  mode: "defensive-offensive"
+  telemetry: true
+modules:
+  agents: enabled
+  cognitive_engine: enabled
+  remediation: enabled
+  dashboard: enabled
+  api: enabled
+  compliance: enabled
+  telemetry: enabled
