@@ -1,30 +1,32 @@
 # Arquitectura SABSA de ARES‑11
+<head>
+	<link rel="icon" href="/assets/favicon.png" type="image/png" />
+</head>
+
+# Arquitectura ARES‑11 (SABSA-aligned)
 
 ## Capas SABSA
-### Contextual
-- Propósito: Gobierno, cumplimiento y alineación estratégica.
-- Stakeholders: CISO, auditores, equipos de seguridad.
+- Contextual
+- Conceptual
+- Logical
+- Physical
 
-### Conceptual
-- Motor de razonamiento de seguridad.
-- Pipeline modular.
-- Integración con inteligencia y estándares.
+## Flujo táctico
+Explicación del pipeline de auditoría.
 
-### Logical
-- Orchestrator central.
+## Motor de razonamiento
+Cómo correlaciona evidencia, controles y amenazas.
+
+## Mapa táctico de riesgo
+Descripción del modelo.
 - Módulos desacoplados.
 - Flujos de datos y evidencia.
 - Telemetría avanzada.
 
 ### Physical
-- Despliegue en cloud/híbrido.
+- Despliegue cloud/híbrido.
 - Contenedores y microservicios.
 - Integración con SIEM y sistemas externos.
-
-## Motor de razonamiento
-- Analiza, correlaciona y prioriza riesgos.
-- Genera evidencia técnica y recomendaciones.
-- Toma decisiones basadas en contexto y política.
 
 ## Flujo táctico de auditoría
 1. Fingerprinting
@@ -35,7 +37,15 @@
 6. Remediación
 7. Visualización táctica
 
-## Mapa de riesgo
+## Motor de razonamiento
+- Analiza, correlaciona y prioriza riesgos.
+- Genera evidencia técnica y recomendaciones.
+- Toma decisiones basadas en contexto y política.
+
+## Mapa táctico de riesgo
 - Riesgo real calculado por factores ponderados.
 - Visualización dinámica en dashboard.
 - Evidencia trazable por cada hallazgo.
+
+## Integración con telemetría avanzada
+- Eventos clave, métricas críticas y trazabilidad en cada capa.

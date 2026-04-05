@@ -1,3 +1,7 @@
+<head>
+	<link rel="icon" href="/assets/favicon.png" type="image/png" />
+</head>
+
 # Filosofía ARES‑11
 
 ## Principio rector SABSA

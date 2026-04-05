@@ -1,3 +1,7 @@
+<head>
+	<link rel="icon" href="/assets/favicon.png" type="image/png" />
+</head>
+
 # CIS Auditor
 
 ## Auditoría CIS IG1/IG2/IG3

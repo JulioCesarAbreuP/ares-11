@@ -1,3 +1,7 @@
+<head>
+	<link rel="icon" href="/assets/favicon.png" type="image/png" />
+</head>
+
 # Fingerprinting Engine
 
 ## Descubrimiento determinista
