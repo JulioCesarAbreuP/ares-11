@@ -17,61 +17,96 @@ ARES‑11 se compone de siete módulos:
 7. **Tactical Dashboard** — Visualización D3.js  
 
 
-## 📂 Estructura del Proyecto
-(Generada automáticamente por el setup inicial)
+# ARES-11
 
+![Estado](https://img.shields.io/badge/status-active-brightgreen)
+![Versión](https://img.shields.io/badge/version-1.0.0-blue)
+![Licencia](https://img.shields.io/badge/license-MIT-green)
+![Build](https://img.shields.io/badge/build-passing-lightgrey)
 
-## 🛡️ Principio Rector: Evidence‑Based Security
-ARES‑11 no asume. **Demuestra**.
+Plataforma modular, extensible y certificable para auditoría, análisis y orquestación de flujos de ciberseguridad.
 
-Cada hallazgo incluye:
+---
 
+## Propósito del proyecto
+ARES-11 permite a equipos de seguridad automatizar auditorías, integrar inteligencia, correlacionar amenazas y generar evidencia técnica verificable, alineada con estándares internacionales (CIS, MITRE ATT&CK, NIST CSF).
 
-## 🧪 Estado del Proyecto
-Versión inicial: **0.1.0**  
-Objetivo: Construir el motor base y el pipeline de correlación.
+## Arquitectura general
+Orchestrator central endurecido, pipeline configurable y validable, módulos core desacoplados y telemetría avanzada. Todo el sistema está orientado a la observabilidad, la trazabilidad y la defensa en profundidad.
 
+### Diagrama textual del pipeline
 
-## 🏛️ Licencia
-MIT
+```
+[Entrada] → [Orchestrator] → [Pipeline]
+	├─► [CIS Auditor]
+	├─► [Fingerprint]
+	├─► [KEV]
+	├─► [Remediation]
+	├─► [Risk Engine]
+	├─► [Threat Mapper]
+	├─► [Taxii Client]
+	└─► [Telemetría]
+		↓
+	[Reportes] → [UI/Dashboards]
+```
 
-## 📝 Documentación y Estándares
+## Instrucciones de instalación y uso
 
-ARES-11 sigue estándares de documentación exhaustivos:
+Requisitos: Node.js >= 18, npm >= 9
 
-- **JSDoc avanzado** en todas las funciones públicas y módulos clave.
-- **Comentarios arquitectónicos** que explican decisiones, patrones y extensibilidad.
-- **README de nivel producto**: visión, arquitectura, uso, extensión, advertencias, mejores prácticas, roadmap, glosario y filosofía.
+```bash
+git clone https://github.com/JulioCesarAbreuP/ares-11.git
+cd ares-11
+npm install
+npm start
+```
 
-### Módulos principales
+## Casos de uso
+- Auditoría automatizada de controles CIS
+- Correlación de amenazas con MITRE ATT&CK
+- Generación de planes NIST CSF y evidencia técnica
+- Integración de inteligencia vía TAXII/STIX
+- Visualización de riesgos y remediación
 
-- `src/core/` — Motores de fingerprinting, inteligencia, correlación y riesgo.
-- `src/orchestrator/` — Orquestación, flujos IRP y pipeline resiliente.
-- `src/utils/` — Utilidades, validadores, logger, bus de telemetría, alertas.
-- `src/ui/dashboard/` — Paneles D3.js, terminal táctico, performance.
+## Buenas prácticas
+- Modularizar nuevas funcionalidades y documentar cada módulo
+- Usar logs estructurados, métricas y eventos normalizados
+- Versionar configuraciones, reglas y esquemas
+- Revisar y actualizar dashboards y documentación periódicamente
+- Validar la cobertura y calidad mediante pruebas, auditoría y telemetría avanzada
 
-### Extensión y personalización
+## Advertencias técnicas
+- Respetar interfaces, contratos y modularidad estricta
+- Validar entradas, salidas y evidencia técnica
+- No acoplar lógica de negocio al orchestrator
+- Mantener trazabilidad, telemetría y observabilidad avanzada de extremo a extremo
 
-ARES-11 está diseñado para ser **extensible** y **auditable**. Siga los patrones de modularidad y telemetría para agregar nuevos motores, validadores o paneles.
+## Roadmap público
+- Integración avanzada y validación de fuentes TAXII/STIX
+- Motor de remediación automatizada y trazable
+- Dashboards personalizables y exportables
+- Soporte para ejecución distribuida y escalabilidad horizontal
+- API REST y CLI para integración externa
+- Certificación de evidencias y auditoría forense
+- Módulo de correlación avanzada MITRE/NIST
+- Generación automática de reportes y planes NIST CSF
+- Integración de autenticación y control de acceso basado en roles
+- Pruebas automatizadas de extremo a extremo y cobertura de seguridad
+- Telemetría avanzada y exportación a sistemas SIEM
 
-### Advertencias y mejores prácticas
+## Glosario técnico consolidado
+- **Orchestrator**: Componente central de control, integración y coordinación de flujos y módulos, con gestión de errores y dependencias.
+- **Pipeline**: Secuencia configurable y validable de etapas de análisis, enriquecimiento y reporte, con puntos de control y rollback.
+- **CIS**: Center for Internet Security, estándar de controles de ciberseguridad.
+- **KEV**: Known Exploited Vulnerabilities, catálogo de vulnerabilidades explotadas activamente.
+- **TAXII**: Trusted Automated eXchange of Indicator Information, protocolo de intercambio de inteligencia.
+- **STIX**: Structured Threat Information Expression, estándar de modelado de inteligencia.
+- **MITRE ATT&CK**: Marco de referencia para tácticas y técnicas de adversarios.
+- **NIST CSF**: Cybersecurity Framework, marco de referencia para gestión de riesgos.
+- **Remediation**: Proceso de corrección y mitigación de riesgos y vulnerabilidades, con trazabilidad y auditoría.
+- **Telemetría**: Registro estructurado de métricas, logs, eventos y evidencia técnica, con exportación y defensa en profundidad.
+- **Evidencia técnica**: Artefactos verificables generados por el sistema para auditoría y certificación.
+- **Contrato explícito**: Definición formal y documentada de las interfaces, entradas y salidas de cada módulo, versionada y auditable.
 
-- No modificar lógica crítica sin actualizar validadores y pruebas.
-- Mantener la trazabilidad de eventos y errores mediante el logger estructurado.
-- Usar la telemetría persistente para auditoría y análisis forense.
-
-### Roadmap
-
-- Integración de IA para priorización de riesgos.
-- Soporte multi-tenant y despliegue cloud-native.
-- Paneles avanzados de remediación y simulación.
-
-### Glosario
-
-- **TSP**: Tactical Security Probe
-- **IRP**: Incident Response Pipeline
-- **KEV**: Known Exploited Vulnerabilities
-
-### Filosofía
-
-ARES-11 promueve la **seguridad basada en evidencia**, la **resiliencia operativa** y la **observabilidad total**.
+## Filosofía y estructura editorial
+ARES-11 prioriza la modularidad, la transparencia, la trazabilidad, la defensa en profundidad y la extensibilidad. La documentación es clara, progresiva, orientada a la certificación, la auditoría y la transferencia de conocimiento. El sistema está diseñado para evolucionar, adaptarse y cumplir con los más altos estándares de calidad, seguridad y observabilidad avanzada.
