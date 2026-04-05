@@ -55,10 +55,12 @@ npm start
 
 La documentación doctrinal de ARES‑11 describe en detalle cada módulo, herramienta y componente del motor de razonamiento de seguridad, alineando la operación con estándares internacionales y mejores prácticas empresariales.
 
-- [Acceso al índice doctrinal de la API](docs/API/index.md)
-- [Paneles UI avanzados](docs/API/ui-panels.md)
 
 Esta sección permite navegar la arquitectura, los módulos y la interfaz empresarial de ARES‑11, facilitando la auditoría basada en evidencia y la toma de decisiones táctica.
+### Interfaz Empresarial (UI)
+
+Accede a la interfaz visual y navega todas las herramientas desde:
+- [Interfaz Empresarial de ARES‑11 (UI)](docs/API/UI/index.md)
 - Correlación de amenazas con MITRE ATT&CK
 - Generación de planes NIST CSF y evidencia técnica
 - Integración de inteligencia vía TAXII/STIX
