@@ -20,26 +20,35 @@
     <h1>ARES‑11</h1>
     <div class="description">Plataforma de Defensa Proactiva y Auditoría Táctica.<br>Índice general de módulos y herramientas.</div>
   </header>
-  <nav class="menu-panel" aria-label="Menú global">
-    <button class="menu-close" aria-label="Cerrar menú">×</button>
-    <h3>Menú Global</h3>
-    <div class="menu-links">
-      <a class="menu-link" href="index.html">Inicio</a>
-      <a class="menu-link" href="core/index.html">Core (Orquestador)</a>
-      <a class="menu-link" href="domain/index.html">Domain</a>
-      <a class="menu-link" href="pipeline/index.html">Pipeline</a>
-      <a class="menu-link" href="infrastructure/index.html">Infrastructure</a>
-      <a class="menu-link" href="interfaces/index.html">Interfaces</a>
-      <a class="menu-link" href="docs/index.html">Documentación</a>
-      <a class="menu-link" href="tests/index.html">Tests</a>
-      <hr style="border:0;border-top:1px solid #1f1f1f;margin:18px 0;">
-      <a class="menu-link" href="docs/landing.md">Portada Doctrinal</a>
-      <a class="menu-link" href="docs/ONBOARDING.md">Onboarding</a>
-      <a class="menu-link" href="docs/API/index.md">Índice Doctrinal API</a>
-      <a class="menu-link" href="docs/TECHNICAL_GUIDE.md">Guía Técnica</a>
-      <a class="menu-link" href="docs/INTEGRATION_GUIDE.md">Guía de Integración</a>
-      <a class="menu-link" href="docs/roadmap.md">Roadmap</a>
+  <!-- Menú hamburguesa ARES‑11 -->
+  <nav class="ares-nav">
+    <input type="checkbox" id="ares-menu-toggle" class="ares-menu-toggle" />
+    <label for="ares-menu-toggle" class="ares-menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="ares-logo">
+      ARES‑11
+      <span class="ares-subtitle">Motor de Razonamiento</span>
     </div>
+
+    <ul class="ares-menu">
+      <li><a href="cis-auditor.html">CIS Auditor</a></li>
+      <li><a href="taxii-client.html">TAXII Client</a></li>
+      <li><a href="risk-engine.html">Risk Engine</a></li>
+      <li><a href="remediation-engine.html">Remediation Engine</a></li>
+      <li><a href="tactical-dashboard.html">Tactical Dashboard</a></li>
+      <li><a href="quick-triage.html">Quick Triage</a></li>
+      <li><a href="exporter.html">Exporter</a></li>
+      <li><a href="notifier.html">Notifier</a></li>
+      <li><a href="live-monitor.html">Live Monitor</a></li>
+      <li><a href="remediation-script-generator.html">Remediation Script Generator</a></li>
+      <li><a href="whitelist.html">Whitelist</a></li>
+      <li><a href="shodan-check.html">Shodan Check</a></li>
+      <li><a href="forensics-packager.html">Forensics Packager</a></li>
+    </ul>
   </nav>
   <main class="container">
     <section>
