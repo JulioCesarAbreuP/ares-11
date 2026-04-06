@@ -1,0 +1,100 @@
+/* --- Menú Hamburguesa Universal --- */
+.hamburger {
+  position: absolute;
+  top: 48px;
+  right: 32px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1100;
+}
+.hamburger-bar {
+  width: 28px;
+  height: 4px;
+  background: #1E90FF;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 320px;
+  background: #111111;
+  box-shadow: -2px 0 24px rgba(30,144,255,0.15);
+  border-left: 1px solid #1f1f1f;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 30px 30px;
+}
+.menu-panel.open {
+  transform: translateX(0);
+}
+.menu-panel h3 {
+  color: #1E90FF;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.3rem;
+}
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu-link {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.08rem;
+  padding: 10px 0 10px 8px;
+  border-radius: 4px;
+  transition: background 0.18s, color 0.18s;
+  text-decoration: none;
+}
+.menu-link:hover {
+  color: #1E90FF;
+  background: rgba(30,144,255,0.08);
+}
+.menu-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: 2.1rem;
+  cursor: pointer;
+  z-index: 1300;
+  transition: color 0.2s;
+}
+.menu-close:hover {
+  color: #1E90FF;
+}
+@media (max-width: 600px) {
+  .menu-panel {
+    width: 100vw;
+    padding: 32px 12px 20px 18px;
+  }
+  .hamburger {
+    right: 16px;
+    top: 24px;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+  background: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
