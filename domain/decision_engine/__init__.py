@@ -1,0 +1,1 @@
+# Lógica de decisión central irá aquí

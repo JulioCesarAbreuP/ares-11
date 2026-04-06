@@ -1,0 +1,8 @@
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #181c20; color: #e0e0e0; margin: 0; }
+header { background: #1a2332; padding: 1.5rem; text-align: center; }
+h1 { margin: 0; font-size: 2.2rem; letter-spacing: 2px; }
+main { max-width: 900px; margin: 2rem auto; padding: 2rem; background: #232b36; border-radius: 12px; box-shadow: 0 2px 12px #0008; }
+h2 { color: #7ecfff; border-bottom: 1px solid #333; padding-bottom: 0.3em; }
+#tactical-summary { margin: 1em 0; padding: 1em; background: #20262e; border-radius: 8px; min-height: 60px; }
+ul { list-style: disc inside; }
+footer { text-align: center; padding: 1.5rem; background: #1a2332; color: #aaa; margin-top: 2rem; }

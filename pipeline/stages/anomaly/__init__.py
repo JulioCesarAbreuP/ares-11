@@ -1,0 +1,1 @@
+# Lógica de análisis de anomalías irá aquí

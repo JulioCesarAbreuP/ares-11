@@ -1,0 +1,7 @@
+{"timestamp":"2026-04-06T00:00:30.540Z","level":"info","message":"🎛️ Simulador de eventos iniciado...","context":{"module":"eventSimulator"}}
+{"timestamp":"2026-04-06T00:00:30.573Z","level":"info","message":"🔧 Orquestador ARES‑11 iniciado...","context":{"module":"orchestrator"}}
+{"timestamp":"2026-04-06T00:00:30.577Z","level":"info","message":"🚀 Ejecutando IRP‑03...","context":{"module":"irp03Flow"}}
+{"timestamp":"2026-04-06T00:00:32.080Z","level":"info","message":"📡 Métrica recibida","context":{"module":"orchestrator","data":{"type":"cpu","value":18,"timestamp":1775433632064}}}
+{"timestamp":"2026-04-06T00:00:33.572Z","level":"info","message":"📡 Métrica recibida","context":{"module":"orchestrator","data":{"type":"cpu","value":83,"timestamp":1775433633570}}}
+{"timestamp":"2026-04-06T00:00:35.078Z","level":"info","message":"📡 Métrica recibida","context":{"module":"orchestrator","data":{"type":"cpu","value":58,"timestamp":1775433635076}}}
+{"timestamp":"2026-04-06T00:00:36.577Z","level":"info","message":"📡 Métrica recibida","context":{"module":"orchestrator","data":{"type":"cpu","value":53,"timestamp":1775433636576}}}

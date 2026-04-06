@@ -1,0 +1,1 @@
+# Lógica de AI Gateway (sanitización, DLP, RBAC) irá aquí
