@@ -39,6 +39,25 @@
       <a class="menu-link" href="docs/roadmap.md">Roadmap</a>
     </div>
   </nav>
+  <!-- === SCAN PANEL === -->
+    <div style="margin-top:20px; padding:15px; border:1px solid #444; border-radius:8px;">
+        <h3>Escaneo Local</h3>
+
+        <input id="scanTarget" 
+               type="text" 
+               placeholder="Introduce IP del laboratorio (ej: 192.168.1.84)" 
+               style="padding:8px; width:250px;">
+
+        <button id="scanBtn" 
+                style="padding:8px 15px; margin-left:10px; cursor:pointer;">
+            Ejecutar Scan
+        </button>
+
+        <pre id="scanResult" 
+             style="margin-top:15px; background:#111; color:#0f0; padding:10px; border-radius:6px;">
+        </pre>
+    </div>
+    <!-- === END SCAN PANEL === -->
   <main class="container">
     <section>
       <h2>Módulos Principales</h2>

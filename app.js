@@ -41,4 +41,35 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.style.overflow = '';
     }
   });
+
+  // === SCAN PANEL ===
+  const scanBtn = document.getElementById('scanBtn');
+  const scanTarget = document.getElementById('scanTarget');
+  const scanResult = document.getElementById('scanResult');
+
+  if (scanBtn && scanTarget && scanResult) {
+    scanBtn.addEventListener('click', async function () {
+      const target = scanTarget.value.trim();
+      scanResult.textContent = '';
+      if (!target) {
+        scanResult.textContent = 'Por favor, introduce una IP o dominio.';
+        return;
+      }
+      scanResult.textContent = 'Enviando solicitud de escaneo...';
+      try {
+        const response = await fetch('/scan', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ target })
+        });
+        if (!response.ok) {
+          throw new Error('Error en el servidor: ' + response.status);
+        }
+        const data = await response.json();
+        scanResult.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        scanResult.textContent = 'Error: ' + err.message;
+      }
+    });
+  }
 });
