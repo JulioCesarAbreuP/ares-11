@@ -1,4 +1,4 @@
-# ARES-11: Plataforma de Defensa Proactiva
+# ARES-11: Plataforma de Defensa Proactiva 
 
 ## Arquitectura Final
 - Clean Architecture: Core → Domain → Infrastructure
