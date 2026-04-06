@@ -1,7 +1,0 @@
-theme: jekyll-theme-architect
-title: "ARES‑11"
-description: "Motor de auditoría táctica y razonamiento de riesgo"
-markdown: kramdown
-include:
-	- assets
-	- docs
