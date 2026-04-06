@@ -1,0 +1,32 @@
+# .github/workflows/release.yml
+# Automatización de releases y changelog
+name: Release y Changelog
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar changelog
+        run: |
+          git log $(git describe --tags --abbrev=0 @^)..@ --pretty=format:'* %s' > CHANGELOG.md
+      - name: Crear release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: CHANGELOG.md
+      - name: Subir artefactos
+        uses: actions/upload-artifact@v3
+        with:
+          name: ares-11-release
+          path: |
+            docs/
+            src/
+            engine/
+            scanner/
+            README.md
+            LICENSE

@@ -9,8 +9,20 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <meta name="description" content="Plataforma de Defensa Proactiva y Auditoría Táctica. Índice general de módulos y herramientas ARES‑11.">
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="ARES‑11 — Motor de Razonamiento y Auditoría Táctica" />
+  <meta property="og:description" content="Plataforma de Defensa Proactiva y Auditoría Táctica. Índice general de módulos y herramientas ARES‑11." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/favicon.png" />
+  <meta property="og:url" content="https://juliocesarabreup.github.io/ares-11/" />
+  <meta name="twitter:card" content="summary" />
 </head>
 <body>
+  <button id="theme-toggle" aria-label="Alternar modo claro/oscuro" style="position:absolute;top:12px;right:16px;z-index:100;min-width:40px;min-height:40px;background:transparent;border:none;cursor:pointer;font-size:1.3rem;">🌙</button>
+  <select id="lang-select" aria-label="Seleccionar idioma" style="position:absolute;top:12px;right:64px;z-index:100;min-width:60px;min-height:32px;">
+    <option value="es">ES</option>
+    <option value="en">EN</option>
+  </select>
   <header style="position:relative;">
     <div class="hamburger" aria-label="Abrir menú" tabindex="0">
       <div class="hamburger-bar"></div>
@@ -22,8 +34,8 @@
   </header>
   <!-- Menú hamburguesa ARES‑11 -->
   <nav class="ares-nav">
-    <input type="checkbox" id="ares-menu-toggle" class="ares-menu-toggle" />
-    <label for="ares-menu-toggle" class="ares-menu-icon">
+    <input type="checkbox" id="ares-menu-toggle" class="ares-menu-toggle" aria-controls="ares-menu" aria-expanded="false" />
+    <label for="ares-menu-toggle" class="ares-menu-icon" tabindex="0" aria-label="Abrir menú de navegación" role="button" aria-haspopup="true" aria-controls="ares-menu">
       <span></span>
       <span></span>
       <span></span>
@@ -34,24 +46,25 @@
       <span class="ares-subtitle">Motor de Razonamiento</span>
     </div>
 
-    <ul class="ares-menu">
-      <li><a href="cis-auditor.html">CIS Auditor</a></li>
-      <li><a href="taxii-client.html">TAXII Client</a></li>
-      <li><a href="risk-engine.html">Risk Engine</a></li>
-      <li><a href="remediation-engine.html">Remediation Engine</a></li>
-      <li><a href="tactical-dashboard.html">Tactical Dashboard</a></li>
-      <li><a href="quick-triage.html">Quick Triage</a></li>
-      <li><a href="exporter.html">Exporter</a></li>
-      <li><a href="notifier.html">Notifier</a></li>
-      <li><a href="live-monitor.html">Live Monitor</a></li>
-      <li><a href="remediation-script-generator.html">Remediation Script Generator</a></li>
-      <li><a href="whitelist.html">Whitelist</a></li>
-      <li><a href="shodan-check.html">Shodan Check</a></li>
-      <li><a href="forensics-packager.html">Forensics Packager</a></li>
+    <ul class="ares-menu" id="ares-menu" role="menu" aria-label="Menú principal">
+      <li role="none"><a role="menuitem" tabindex="-1" href="cis-auditor.html">CIS Auditor</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="taxii-client.html">TAXII Client</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="risk-engine.html">Risk Engine</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="remediation-engine.html">Remediation Engine</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="tactical-dashboard.html">Tactical Dashboard</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="quick-triage.html">Quick Triage</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="exporter.html">Exporter</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="notifier.html">Notifier</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="live-monitor.html">Live Monitor</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="remediation-script-generator.html">Remediation Script Generator</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="whitelist.html">Whitelist</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="shodan-check.html">Shodan Check</a></li>
+      <li role="none"><a role="menuitem" tabindex="-1" href="forensics-packager.html">Forensics Packager</a></li>
     </ul>
   </nav>
   <main class="container">
     <section>
+      <script src="examples/interactive-demo.js"></script>
       <h2>Módulos Principales</h2>
       <div class="cards">
         <a class="card" href="core/index.html">
@@ -88,6 +101,6 @@
   <footer>
     © 2026 ARES‑11 — Arquitectura y Seguridad Basada en Evidencia
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
